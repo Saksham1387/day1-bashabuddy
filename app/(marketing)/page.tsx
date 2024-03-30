@@ -18,6 +18,12 @@ import { useUser } from "@clerk/clerk-react";
 export default function Home() {
   const { user } = useUser();
   const router = useRouter();
+  
+
+  if (user) {
+    router.push("/learn");
+    return null;
+  }
 
   
 
@@ -43,8 +49,8 @@ export default function Home() {
             <SignedOut>
               <SignUpButton
                 mode="modal"
-                afterSignInUrl="/"
-                afterSignUpUrl="/"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
               >
                 <Button size="lg" variant="secondary" className="w-full">
                   Get Started
@@ -52,8 +58,8 @@ export default function Home() {
               </SignUpButton>
               <SignInButton
                 mode="modal"
-                afterSignInUrl="/"
-                afterSignUpUrl="/"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
               >
                 <Button size="lg" variant="primaryOutline" className="w-full">
                   I already have an account

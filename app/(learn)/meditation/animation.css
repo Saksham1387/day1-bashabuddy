@@ -1,0 +1,30 @@
+:root {
+  --light-color: #ffffff;
+  --ring-color: #c084fc;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.ellipse2 {
+  fill: var(--light-color);
+}
+
+.ellipse1 {
+  fill: var(--ring-color);
+}
+
+@keyframes expandShrinkAnimation {
+  0%, 100% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(5);
+  }
+}
+
+.ellipse1,
+.ellipse2 {
+  animation: expandShrinkAnimation 30s ease forwards;
+}

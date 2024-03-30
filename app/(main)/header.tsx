@@ -1,7 +1,6 @@
 // import Image from "next/image";
 // import { Loader } from "lucide-react";
 // import Link from "next/link";
-
 // import {
 //   ClerkLoaded,
 //   ClerkLoading,
@@ -19,28 +18,14 @@
 //           <Link href="/">
 //             <Image src="/mascot.svg" height={40} width={40} alt="Mascot" />
 //           </Link>
+
 //           <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
 //             BhashaBuddy
 //           </h1>
 //         </div>
-
-
-//         <div className="ml-[500px]">
-//           <Link href="/learn" passHref>
-//             <Button variant="sidebar">My Dashboard</Button>
-//           </Link>
-//         </div>
-
-//         <div className="ml-[500px]">
-//           <Link href="/AboutUs" passHref>
-//             <Button variant="sidebar">About Us</Button>
-//           </Link>
-//         </div>
-
 //         <ClerkLoading>
 //           <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
 //         </ClerkLoading>
-        
 //         <ClerkLoaded>
 //           <SignedIn>
 //             <UserButton afterSignOutUrl="/" />
@@ -48,8 +33,8 @@
 //           <SignedOut>
 //             <SignInButton
 //               mode="modal"
-//               afterSignInUrl="/detect"
-//               afterSignUpUrl="/detect"
+//               afterSignInUrl="/learn"
+//               afterSignUpUrl="/learn"
 //             >
 //               <Button size="lg">Login</Button>
 //             </SignInButton>
@@ -59,6 +44,10 @@
 //     </header>
 //   );
 // };
+
+
+
+
 
 
 import Image from "next/image";
@@ -96,7 +85,7 @@ export const Header = () => {
             <Button variant="sidebar">My Dashboard</Button>
           </Link>
           </SignedIn>
-          <Link href="/aboutUs" passHref>
+          <Link href="/AboutUs" passHref>
             <Button variant="sidebar">About Us</Button>
           </Link>
         </div>
@@ -109,13 +98,13 @@ export const Header = () => {
           
           <ClerkLoaded>
             <SignedIn>
-              <UserButton afterSignOutUrl="/learn" />
+              <UserButton afterSignOutUrl="/" />
             </SignedIn>
             <SignedOut>
               <SignInButton
                 mode="modal"
-                afterSignInUrl="/learn"
-                afterSignUpUrl="/learn"
+                afterSignInUrl="/detect"
+                afterSignUpUrl="/detect"
               >
                 <Button size="lg">Login</Button>
               </SignInButton>
